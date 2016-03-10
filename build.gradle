@@ -1,0 +1,15 @@
+apply plugin: 'java'
+apply plugin: 'checkstyle'
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+}
+
+checkstyle {
+    configFile = new File('checkstyle.xml')
+    toolVersion = '6.16.1'
+}
+
+repositories {
+    mavenCentral()
+}
