@@ -5,13 +5,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh './gradlew build -x check --info'
+                sh './gradlew clean build -x check --info'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh './gradlew clean test'
+                sh './gradlew test'
             }
         }
         stage('Deploy') {
